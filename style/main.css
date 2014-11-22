@@ -4,9 +4,9 @@ body {
 /*	background-color: black;
 */}
 
-/*div {
+div {
 	border: 2px dashed white;
-}*/
+}
 
 .background {
 	position: fixed;
@@ -71,6 +71,7 @@ body {
 	list-style-type: none;
 }
 .cast-image {
+	margin: 0 auto;
 	height: 100px;
 	width: 100px;
 }

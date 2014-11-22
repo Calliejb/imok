@@ -11,7 +11,7 @@ app.controller('MainController', ['$scope', function($scope) {
 			imdb: "imdb.com/rhanks"
 		},
 		{
-			name: "Callie Burke",
+			name: "Elizabeth Hodgman",
 			title: "Director of Photography",
 			picture: "images/cburke.jpg"
 		}
