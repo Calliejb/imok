@@ -7,13 +7,32 @@ app.controller('MainController', ['$scope', function($scope) {
 			name: "Ron Hanks",
 			title: "Director",
 			email: "rhanks@gmail.com",
-			picture: "images/rhanks.jpg",
+			picture: "style/images/rhanks.jpg",
 			imdb: "imdb.com/rhanks"
 		},
 		{
-			name: "Callie Burke"
+			name: "Callie Burke",
+			title: "Director of Photography",
+			picture: "images/cburke.jpg"
 		}
 
 	];
 
-}])
+}]);
+
+function parallax() {
+	var scrolled = $(window).scrollTop();
+    $('.background').css('top', -(scrolled * 0.3) + 'px');
+    
+    if (scrolled > 250) {
+    	$('.title').css('top', 500 + 'px');
+    	$('.title').css('position', 'absolute');
+    } else {
+    	$('.title').css('top', 250 + 'px');
+    	$('.title').css('position', 'fixed');
+    }
+}
+
+$(window).scroll(function(e){
+    parallax();
+});

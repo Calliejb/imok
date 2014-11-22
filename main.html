@@ -1,12 +1,17 @@
 <html ng-app="imokApp">
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Raleway:700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style/main.css">
 	<title>I'm Ok</title>
 </head>
 <body ng-controller="MainController">
+	
+	<div class="background">
+	</div>
+
 	<div class="navbar">
 		<ul>
 			<li>Home</li>
@@ -16,6 +21,11 @@
 		</uL>
 		
 	</div>
+
+	<div class="title">
+		<h1>I'M OK</h1>
+	</div>
+
 
 <!-- 	<div class="section">
 		<div class="title">
@@ -28,10 +38,10 @@
 	</div>
 
 	<div class="section" id="credits">
-		<div ng-repeat="image in castImages">
+		<div class="person" ng-repeat="image in castImages">
 			
-			<div class="image">
-				{{image.picture}}
+			<div class="cast-image">
+				<img ng-src="{{image.picture}}">
 			</div>
 			<ul>
 				<li>{{image.name}}</li>
