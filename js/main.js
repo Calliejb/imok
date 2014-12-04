@@ -2,6 +2,17 @@ var app = angular.module('imokApp', []);
 
 app.controller('MainController', ['$scope', function($scope) {
 
+		$scope.navBar = [
+		{
+			title: "Home"
+		},
+		{	title: "Synopsis"
+		},
+		{	title: "Credits"
+		},
+		{	title: "Contact"}
+	];
+
 	$scope.castImages = [
 		{
 			name: "Ron Hanks",
@@ -18,11 +29,22 @@ app.controller('MainController', ['$scope', function($scope) {
 
 	];
 
+	// $scope.moveTo = function() {
+	// 	var position + $(".section").position();
+	// 	x = position.top;
+	// 	y = position.left;
+	// 	window.scrollTo(x,y);
+	// }
+
 }]);
+
 
 function parallax() {
 	var scrolled = $(window).scrollTop();
     $('.background').css('top', -(scrolled * 0.3) + 'px');
+
+    $('.oklahoma').css('top', 350 + (-(scrolled * 0.25)) + 'px');
+
     
     if (scrolled > 250) {
     	$('.title').css('top', 500 + 'px');
@@ -35,4 +57,8 @@ function parallax() {
 
 $(window).scroll(function(e){
     parallax();
+});
+
+$(window).onLoad(function(e) {
+
 });
