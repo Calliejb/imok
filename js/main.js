@@ -53,6 +53,7 @@ function parallax() {
     	$('.title').css('top', 250 + 'px');
     	$('.title').css('position', 'fixed');
     }
+
 }
 
 $(window).scroll(function(e){
