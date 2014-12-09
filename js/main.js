@@ -43,9 +43,13 @@ function parallax() {
 	var scrolled = $(window).scrollTop();
     $('.background').css('top', -(scrolled * 0.3) + 'px');
 
-    $('.oklahoma').css('top', 350 + (-(scrolled * 0.25)) + 'px');
+    // $('.oklahoma').css('top', 350 + (-(scrolled * 0.25)) + 'px');
 
-    
+    if(scrolled >10) {
+    	$('.arrow').css('display', 'none');
+    } else {
+    	$('.arrow').css('display', 'block');
+    }
     if (scrolled > 350) {
     	$('.title').css('top', 500 + 'px');
     	$('.title').css('position', 'absolute');
