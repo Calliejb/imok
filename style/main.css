@@ -43,9 +43,22 @@ body {
 	font-size: 50px;
 	height: 200px;
 	position: fixed;
-	top: 250px;
+	top: 150px;
 	left: 300px;
 	z-index: -1;
+	display: none;
+}
+.arrow {
+	display:none;
+	position: relative;
+	top: 500px;
+	text-align: center;
+/*	background-image: url('images/down-arrow.png');
+*/
+}
+.arrow-img:hover {
+	cursor: pointer;
+	opacity: .5;
 }
 
 .section {
@@ -61,24 +74,40 @@ body {
 	font-family: 'Oswald';
 /*	font-size: 3.5em;
 */	margin-top: 720px;
-	height: 350px;
-	margin-bottom: 100px;
+	height: 300px;
+	margin-bottom: 50px;
+	padding-top: 10px;
 /*	border-radius: 50px;
 */}
 #credits ul {
 	list-style-type: none;
 }
-.cast-image {
+#credits .fir_row {
+	margin-left: 10%;
+}
+#credits .fir_row span {
+	margin-left: 50px;
+}
+#credits .sec_row {
+	margin-left:30%;
+}
+#credits .sec_row span {
+	margin-left:50px;
+}
+#credits h4 {
+	margin-left: 10%;
+}
+/*.cast-image {
 	margin: 0 auto;
 	height: 100px;
 	width: 100px;
-}
+}*/
 
-.person {
+/*.person {
 	width: 200px;
 	height: 200px;
 	float: left;
-}
+}*/
 
 .oklahoma {
 	position: relative;

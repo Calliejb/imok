@@ -46,20 +46,32 @@ function parallax() {
     $('.oklahoma').css('top', 350 + (-(scrolled * 0.25)) + 'px');
 
     
-    if (scrolled > 250) {
+    if (scrolled > 350) {
     	$('.title').css('top', 500 + 'px');
     	$('.title').css('position', 'absolute');
     } else {
-    	$('.title').css('top', 250 + 'px');
+    	$('.title').css('top', 150 + 'px');
     	$('.title').css('position', 'fixed');
     }
 
+}
+
+function scrollDown() {
+	$('.arrow').click(function() {
+		$('.arrow').css('display', 'none');
+		$('html, body').animate({
+			scrollTop: $("#credits").offset().top
+		}, 2000);
+	});
 }
 
 $(window).scroll(function(e){
     parallax();
 });
 
-$(window).onLoad(function(e) {
-
+$(document).ready(function() {
+	$('.title').fadeIn(2500, function() {
+		$('.arrow').fadeIn(1000);
+	});
+	scrollDown();
 });
