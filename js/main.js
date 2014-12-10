@@ -75,7 +75,7 @@ $(window).scroll(function(e){
 
 $(document).ready(function() {
 	$('.title').fadeIn(2500, function() {
-		$('.arrow').fadeIn(1000);
+		$('.arrow').fadeIn();
 	});
 	scrollDown();
 });
