@@ -70,7 +70,7 @@ body {
 	margin: auto;
 }
 
-#credits {
+#cast {
 	font-family: 'Oswald', sans-serif;
 /*	font-size: 3.5em;
 */	margin-top: 720px;
@@ -79,22 +79,22 @@ body {
 	padding-top: 10px;
 /*	border-radius: 50px;
 */}
-#credits ul {
+#cast ul {
 	list-style-type: none;
 }
-#credits .fir_row {
+#cast .fir_row {
 	margin-left: 10%;
 }
-#credits .fir_row span {
+#cast .fir_row span {
 	margin-left: 50px;
 }
-#credits .sec_row {
+#cast .sec_row {
 	margin-left:30%;
 }
-#credits .sec_row span {
+#cast .sec_row span {
 	margin-left:50px;
 }
-#credits h4 {
+#cast h4 {
 	margin-left: 12%;
 	margin-top: 50px;
 }
@@ -110,7 +110,7 @@ body {
 	float: left;
 }*/
 
-.oklahoma {
+#crew {
 	background-color: rgba(07, 07, 07, .92);
 	font-family: 'Oswald', sans-serif;
 	font-size: 1.5em;
@@ -123,21 +123,21 @@ body {
 	padding-top: 20px;
 }
 
-.oklahoma .ok1 {
+#crew .ok1 {
 	margin-left: 20%;
 }
 
-.oklahoma .ok2 {
+#crew .ok2 {
 	margin-left: 5%;
 }
 
-.oklahoma .ok3 {
+#crew .ok3 {
 	margin-left: 25%;
 }
-.oklahoma .ok4 {
+#crew .ok4 {
 	margin-left: 7%;
 }
-.oklahoma .ok5 {
+#crew .ok5 {
 	text-align: center;
 	font-size: 1.5em;
 }
