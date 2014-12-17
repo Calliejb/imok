@@ -1,55 +1,54 @@
-var app = angular.module('imokApp', []);
+// var app = angular.module('imokApp', []);
 
-app.controller('MainController', ['$scope', function($scope) {
+// app.controller('MainController', ['$scope', function($scope) {
 
-		$scope.navBar = [
-		{
-			title: "Home"
-		},
-		{	title: "Synopsis"
-		},
-		{	title: "Credits"
-		},
-		{	title: "Contact"}
-	];
+// 		$scope.navBar = [
+// 		{
+// 			title: "Home"
+// 		},
+// 		{	title: "Synopsis"
+// 		},
+// 		{	title: "Credits"
+// 		},
+// 		{	title: "Contact"}
+// 	];
 
-	$scope.castImages = [
-		{
-			name: "Ron Hanks",
-			title: "Director",
-			email: "rhanks@gmail.com",
-			picture: "style/images/rhanks.jpg",
-			imdb: "imdb.com/rhanks"
-		},
-		{
-			name: "Elizabeth Hodgman",
-			title: "Director of Photography",
-			picture: "images/cburke.jpg"
-		}
+// 	$scope.castImages = [
+// 		{
+// 			name: "Ron Hanks",
+// 			title: "Director",
+// 			email: "rhanks@gmail.com",
+// 			picture: "style/images/rhanks.jpg",
+// 			imdb: "imdb.com/rhanks"
+// 		},
+// 		{
+// 			name: "Elizabeth Hodgman",
+// 			title: "Director of Photography",
+// 			picture: "images/cburke.jpg"
+// 		}
 
-	];
+// 	];
 
-	// $scope.moveTo = function() {
-	// 	var position + $(".section").position();
-	// 	x = position.top;
-	// 	y = position.left;
-	// 	window.scrollTo(x,y);
-	// }
+// 	// $scope.moveTo = function() {
+// 	// 	var position + $(".section").position();
+// 	// 	x = position.top;
+// 	// 	y = position.left;
+// 	// 	window.scrollTo(x,y);
+// 	// }
 
-}]);
+// }]);
 
 
 function parallax() {
 	var scrolled = $(window).scrollTop();
     $('.background').css('top', -(scrolled * 0.3) + 'px');
 
-    // $('.oklahoma').css('top', 350 + (-(scrolled * 0.25)) + 'px');
-
-    if(scrolled >10) {
+    if(scrolled > 10) {
     	$('.arrow').css('display', 'none');
     } else {
     	$('.arrow').css('display', 'block');
     }
+    
     if (scrolled > 350) {
     	$('.title').css('top', 500 + 'px');
     	$('.title').css('position', 'absolute');
@@ -64,8 +63,14 @@ function scrollDown() {
 	$('.arrow').click(function() {
 		$('.arrow').css('display', 'none');
 		$('html, body').animate({
-			scrollTop: $("#credits").offset().top
+			scrollTop: $("#cast").offset().top
 		}, 2000);
+	});
+}
+
+function fadeTitle() {
+	$('.title').fadeIn(2500, function() {
+		$('.arrow').fadeIn();
 	});
 }
 
@@ -74,8 +79,6 @@ $(window).scroll(function(e){
 });
 
 $(document).ready(function() {
-	$('.title').fadeIn(2500, function() {
-		$('.arrow').fadeIn();
-	});
+	fadeTitle();
 	scrollDown();
 });
